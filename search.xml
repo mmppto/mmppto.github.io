@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>算法模板</title>
+      <link href="/2023/09/07/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+      <url>/2023/09/07/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/</url>
+      
+        <content type="html"><![CDATA[<h1 id="算法模板"><a href="#算法模板" class="headerlink" title="算法模板"></a>算法模板</h1><h2 id="基础算法"><a href="#基础算法" class="headerlink" title="基础算法"></a>基础算法</h2><h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p><strong>基本思路</strong></p><p>分治</p><pre><code> 1. 确定分界点`q[(l + r) // 2]` 2. 调整范围，保证分界点左侧的数据小于分界点，分界点右侧的数据大于分界点 3. 递归处理左右两侧</code></pre><p><strong>代码</strong></p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">quick_sort</span>(<span class="params">q, l, r</span>):</span><br><span class="line">    <span class="comment"># 若范围内数据数量小于等于1，无需排序</span></span><br><span class="line">    <span class="keyword">if</span> l &gt;= r:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    x, i, j = q[(l + r) // <span class="number">2</span>], l - <span class="number">1</span>, r + <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> i &lt; j:</span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> q[i] &gt;= x:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            j -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> q[j] &lt;= x:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span> i &lt; j:</span><br><span class="line">            q[i], q[j] = q[j], q[i]</span><br><span class="line">    quick_sort(q, l, j)</span><br><span class="line">    quick_sort(q, j + <span class="number">1</span>, r)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">    q = [<span class="built_in">int</span>(x) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">input</span>().split()]</span><br><span class="line">    quick_sort(q, <span class="number">0</span>, n - <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> q:</span><br><span class="line">        <span class="built_in">print</span>(x, end=<span class="string">&#x27; &#x27;</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Linux基础命令</title>
       <link href="/2023/08/11/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"/>
       <url>/2023/08/11/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
